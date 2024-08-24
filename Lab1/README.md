@@ -24,8 +24,10 @@ The ResNet architecture is not always better than a simple CNN without residual 
 
 ## Exercise 2.2 - Fully Convolutional Network
 In this section we adapt our CNN to be Fully-Convolutional, in order to create a network that predicts classification outputs at all pixels in an input images. With this aim we substitute the final Linear layers with De-Convolution layers. The experiment was applied on MNIST dataset to predict handwritten digits. For testing, we create a custom MNIST dataset with different image dimensions (64x64) and with random digit position.  
+Label 0     |  Label 4
 |:-----------------------------:|:----------------------------:|
 |![](images/fcn_results.png)  |  ![](images/fcn_results2.png)  
+ 
 As we can observe, the model predicts the correct label in most of nearest pixel to the digit, whereas it predicts almost random labels for pixel on the sides of the image.
 
 ## Exercise 2.3 - Grad-CAM
