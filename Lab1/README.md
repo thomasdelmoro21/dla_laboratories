@@ -16,8 +16,8 @@ For every experiment, the training is performed with an early stopping technique
 Although the architectures chosen are not deeply optimized, they are informative about the outperforming of CNN with respect to MLP on both datasets. While MLP seems to obtain good results on handwritten digits, it struggles with more complex images like the ones in CIFAR-10. The CNN, instead, is able to capture the spatial information of the images and therefore it is able to classify them better.  
 
 ### ResNet
-Residual Networks are a type of CNN that are able to train very deep networks. They are composed of residual blocks, which are able to learn the identity function.  
-<img src="images/resnet.png" alt="drawing" style="display: block; margin: auto; width: 200px"/>   
+Residual Networks are a type of CNN that are able to train very deep networks. They are composed of residual blocks, which are able to learn the identity function.
+![](images/resnet.png)
 The ResNet architecture is not always better than a simple CNN without residual blocks, but generally it is able to reach better performances. Observing the training curves of our case, it seems that ResNet converges faster than the simple CNN, but the final accuracy is not significantly better. This is probably due to the fact that the dataset is not very complex and the network is not very deep.
  Validation Loss |   Validation Accuracy |
 |:-----------------------------:|:----------------------------:|
