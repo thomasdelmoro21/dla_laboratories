@@ -5,7 +5,8 @@ This lab is about Convolutional Neural Networks (CNNs). In the following exercis
 ## Exercise 1 - MLP and Convolutional Neural Networks
 Firstly, we implement a simple MLP to classify a very easy dataset like MNIST. 
 Then, we observe the difference in terms of performances with a CNN, both on MNIST and CIFAR-10.
-Finally, we implement a ResNet architecture and compare its performances with the previous models.
+Finally, we implement a ResNet architecture and compare its performances with the previous models.  
+For every experiment, the training is performed with an early stopping technique based on the validation loss, so the curves displayed could be shorter than the maximum number of epochs.
 
 ### MLP vs CNN
  MNIST |   CIFAR10 |
@@ -15,14 +16,16 @@ Finally, we implement a ResNet architecture and compare its performances with th
 Although the architectures chosen are not deeply optimized, they are informative about the outperforming of CNN with respect to MLP on both datasets. While MLP seems to obtain good results on handwritten digits, it struggles with more complex images like the ones in CIFAR-10. The CNN, instead, is able to capture the spatial information of the images and therefore it is able to classify them better.  
 
 ### ResNet
-Residual Networks are a type of CNN that are able to train very deep networks. They are composed of residual blocks, which are able to learn the identity function.
-![](images/resnet.png)
+Residual Networks are a type of CNN that are able to train very deep networks. They are composed of residual blocks, which are able to learn the identity function.  
+<img src="images/resnet.png" alt="drawing" style="display: block; margin: auto; width: 200px"/>   
 The ResNet architecture is not always better than a simple CNN without residual blocks, but generally it is able to reach better performances. Observing the training curves of our case, it seems that ResNet converges faster than the simple CNN, but the final accuracy is not significantly better. This is probably due to the fact that the dataset is not very complex and the network is not very deep.
-![](images/curves_cifar.png)
+ Validation Loss |   Validation Accuracy |
+|:-----------------------------:|:----------------------------:|
+|![](images/loss_cifar.png)  |  ![](images/acc_cifar.png)  
 
 ## Exercise 2.2 - Fully Convolutional Network
-In this section we adapt our CNN to be Fully-Convolutional, in order to create a network that predicts classification outputs at all pixels in an input images. With this aim we substitute the final Linear layers with De-Convolution layers. The experiment was applied on MNIST dataset to predict handwritten digits. For testing, we create a custom MNIST dataset with different image dimensions (64x64) and with random digit position.
-![Fully-Convolutional-Network results](images/fcn_results.png)
+In this section we adapt our CNN to be Fully-Convolutional, in order to create a network that predicts classification outputs at all pixels in an input images. With this aim we substitute the final Linear layers with De-Convolution layers. The experiment was applied on MNIST dataset to predict handwritten digits. For testing, we create a custom MNIST dataset with different image dimensions (64x64) and with random digit position.  
+![Fully-Convolutional-Network results](images/fcn_results.png)  
 As we can observe, the model predicts the correct label in most of nearest pixel to the digit, whereas it predicts almost random labels for pixel on the sides of the image.
 
 ## Exercise 2.3 - Grad-CAM
