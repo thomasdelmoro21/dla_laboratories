@@ -17,7 +17,6 @@ Although the architectures chosen are not deeply optimized, they are informative
 
 ### ResNet
 Residual Networks are a type of CNN that are able to train very deep networks. They are composed of residual blocks, which are able to learn the identity function.
-![](images/resnet.png)
 The ResNet architecture is not always better than a simple CNN without residual blocks, but generally it is able to reach better performances. Observing the training curves of our case, it seems that ResNet converges faster than the simple CNN, but the final accuracy is not significantly better. This is probably due to the fact that the dataset is not very complex and the network is not very deep.
  Validation Loss |   Validation Accuracy |
 |:-----------------------------:|:----------------------------:|
@@ -25,7 +24,8 @@ The ResNet architecture is not always better than a simple CNN without residual 
 
 ## Exercise 2.2 - Fully Convolutional Network
 In this section we adapt our CNN to be Fully-Convolutional, in order to create a network that predicts classification outputs at all pixels in an input images. With this aim we substitute the final Linear layers with De-Convolution layers. The experiment was applied on MNIST dataset to predict handwritten digits. For testing, we create a custom MNIST dataset with different image dimensions (64x64) and with random digit position.  
-![Fully-Convolutional-Network results](images/fcn_results.png)  
+|:-----------------------------:|:----------------------------:|
+|![](images/fcn_results.png)  |  ![](images/fcn_results2.png)  
 As we can observe, the model predicts the correct label in most of nearest pixel to the digit, whereas it predicts almost random labels for pixel on the sides of the image.
 
 ## Exercise 2.3 - Grad-CAM
