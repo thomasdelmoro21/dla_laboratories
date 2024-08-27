@@ -64,10 +64,10 @@ We evaluate the performance of the attacks and of the adversarial training with 
 In this section we implement the ODIN method from the [ODIN paper](https://arxiv.org/abs/1706.02690). The method is based on the idea of detecting adversarial samples by measuring the temperature-scaled difference between the softmax output of the model and the softmax output of the model on the OOD samples.
 Specifically the method is based on the following steps:
 - **Temperature Scaling:** The softmax score is computed as
-$$ S_{i}(\boldsymbol{x}, T) = \frac{\exp(f_{i}(\boldsymbol{x})/T)}{\sum_{j=1}^{C} \exp(f_j(\boldsymbol{x})/T)}$$
+$ S_{i}(\boldsymbol{x}, T) = \frac{\exp(f_{i}(\boldsymbol{x})/T)}{\sum_{j=1}^{C} \exp(f_j(\boldsymbol{x})/T)}$
 where $f_j(\boldsymbol{x})$ is the output of the model for class $j$ and where $T$ is the temperature scaling parameter.
 - **Input Preprocessing:** Preprocess the input image with a perturbation
-$$ \boldsymbol{\tilde{x}} = \boldsymbol{x} - \varepsilon \mathrm{sign}(-\nabla_{\mathbf{x}} \log S_{\hat{y}}(\boldsymbol{x}, T))$$
+$ \boldsymbol{\tilde{x}} = \boldsymbol{x} - \varepsilon \mathrm{sign}(-\nabla_{\mathbf{x}} \log S_{\hat{y}}(\boldsymbol{x}, T))$
 where the perturbation can be computed by back-propagating the gradient of the cross-entropy loss w.r.t the input.
 
 - **OOD Detector:** The detector combines the two components described above. For each image $x$, we first calculate the preprocessed input $\tilde{x}$. Next, it feeds this input into the neural network, and it calculates its calibrated softmax score $S(\tilde{x}, T)$.  
@@ -101,7 +101,7 @@ With images from CIFAR-100 the results are not as good as with FakeData, but sti
 |![](./images/roc_msp_odin_resnet_cifar100.png)|![](./images/prc_msp_odin_resnet_cifar100.png)|
 
 ## Exercise 3.3 - Targeted FGSM
-Finally, we implement the Targeted FGSM attack, where the adversarial samples are generated to be classified as a specific target class. The results are not too much different from the standard FGSM attack, but the number of iterations needed to reach the target class is higher. They are shown below some examples of targeted attacks.
+Finally, we implement the Targeted FGSM attack, where the adversarial samples are generated to be classified as a specific target class. The results are not too much different from the standard FGSM attack, but the number of iterations needed to reach the target class is higher. They are shown below some examples of targeted attacks.  
 ![](./images/fgsmt1.png)
 ![](./images/fgsmt2.png)
 ![](./images/fgsmt3.png)
