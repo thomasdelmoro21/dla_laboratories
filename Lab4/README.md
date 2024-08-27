@@ -39,10 +39,7 @@ The OOD dataset is built using a Subset of CIFAR-100 with classes not present in
 
 ## Exercise 2 - Adversarial Attacks and Defences
 In this section we implement the Fast Gradient Sign Method (FGSM) as a technique for adversarial attack.
-FSGM perturbs samples in the direction of the gradient with respect to the input $\mathbf{x}$:
-$$
-\boldsymbol{\eta}(\mathbf{x}) = \varepsilon \mathrm{sign}(\nabla_{\mathbf{x}} \mathcal{L}(\boldsymbol{\theta}, \mathbf{x}, y))
-$$
+FSGM perturbs samples in the direction of the gradient with respect to the input $\mathbf{x}$: $\boldsymbol{\eta}(\mathbf{x}) = \varepsilon \mathrm{sign}(\nabla_{\mathbf{x}} \mathcal{L}(\boldsymbol{\theta}, \mathbf{x}, y))$.   
 We qualitatively and quantitatively evaluate these attacks and then we try to increase the robustness of our model using adversarial training.  
 For this and the following exercises we use the Simple Custom CNN model described above.
 
@@ -65,15 +62,9 @@ We evaluate the performance of the attacks and of the adversarial training with 
 ## Exercise 3.1 - ODIN
 In this section we implement the ODIN method from the [ODIN paper](https://arxiv.org/abs/1706.02690). The method is based on the idea of detecting adversarial samples by measuring the temperature-scaled difference between the softmax output of the model and the softmax output of the model on the OOD samples.
 Specifically the method is based on the following steps:
-- **Temperature Scaling:** The softmax score is computed as
-$$
-S_{i}(\boldsymbol{x}, T) = \frac{\exp(f_{i}(\boldsymbol{x})/T)}{\sum_{j=1}^{C} \exp(f_j(\boldsymbol{x})/T)}
-$$
+- **Temperature Scaling:** The softmax score is computed as $S_{i}(\boldsymbol{x}, T) = \frac{\exp(f_{i}(\boldsymbol{x})/T)}{\sum_{j=1}^{C} \exp(f_j(\boldsymbol{x})/T)}$  
 where $f_j(\boldsymbol{x})$ is the output of the model for class $j$ and where $T$ is the temperature scaling parameter.
-- **Input Preprocessing:** Preprocess the input image with a perturbation
-$$
-\boldsymbol{\tilde{x}} = \boldsymbol{x} - \varepsilon \mathrm{sign}(-\nabla_{\mathbf{x}} \log S_{\hat{y}}(\boldsymbol{x}, T))
-$$
+- **Input Preprocessing:** Preprocess the input image with a perturbation $\boldsymbol{\tilde{x}} = \boldsymbol{x} - \varepsilon \mathrm{sign}(-\nabla_{\mathbf{x}} \log S_{\hat{y}}(\boldsymbol{x}, T))$  
 where the perturbation can be computed by back-propagating the gradient of the cross-entropy loss w.r.t the input.
 
 - **OOD Detector:** The detector combines the two components described above. For each image $x$, we first calculate the preprocessed input $\tilde{x}$. Next, it feeds this input into the neural network, and it calculates its calibrated softmax score $S(\tilde{x}, T)$.  
