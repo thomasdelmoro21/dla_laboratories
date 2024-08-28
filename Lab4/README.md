@@ -1,17 +1,22 @@
 # Lab. 4 - Adversarial Learning and OOD Detection
 In this laboratory we firstly explore the concept of Out-of-Distribution (OOD) detection and then we implement some techniques of adversarial attacks and defences.
 
-## Exercise 1 - Out-of-Distribution Detection
-In this section we build a simple OOD detection pipeline using some simple architectures. We OOD scorse are computed using the Maximum Softmax Probability (MSP) as in the paper [Hendrycks & Gimpel, 2017](https://arxiv.org/abs/1610.02136) and we evaluate the performance of the OOD detection with histograms and then with more advanced techniques like ROC curves and Precision-Recall curves.
-We use the CIFAR-10 dataset for ID examples, while FakeData and CIFAR-100 (classes not in CIFAR-10) for OOD examples.
+## Introduction
+`Lab4.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
+`./images` is the directory where they are saved all the resulting plot displayed in this report.
+This report contains the informations about how the exercises are solved and it shows the most significant results.
 
 ### Models
-We use the following two model architectures for the OOD detection task:
+We use the following two model architectures for the OOD detection task and FGSM attacks:
 
-| Model | Test Accuracy |
+| Model | Test Accuracy (CIFAR-10)|
 |--------------------|---------------|
 |Simple Custom CNN   | 0.7147 |
 |Pretrained ResNet   | 0.9260 |
+
+## Exercise 1 - Out-of-Distribution Detection
+In this section we build a simple OOD detection pipeline using some simple architectures. We OOD scorse are computed using the Maximum Softmax Probability (MSP) as in the paper [Hendrycks & Gimpel, 2017](https://arxiv.org/abs/1610.02136) and we evaluate the performance of the OOD detection with histograms and then with more advanced techniques like ROC curves and Precision-Recall curves.
+We use the CIFAR-10 dataset for ID examples, while FakeData and CIFAR-100 (classes not in CIFAR-10) for OOD examples.
 
 ### FakeData
 The FakeData dataset is generated as Random Noise with the same shape as the CIFAR-10 dataset and with random labels.
