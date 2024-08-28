@@ -34,8 +34,9 @@ The OOD dataset is built using a Subset of CIFAR-100 with classes not present in
 |--------------------|---------------|
 |![](./images/hist_cnn_cifar100.png)|![](./images/hist_resnet_cifar100.png)|
 |![](./images/roc_cnn_cifar100.png)|![](./images/roc_resnet_cifar100.png)|
-|![](./images/prc_cnn_cifar100.png)|![](./images/prc_resnet_cifar100.png)|
+|![](./images/prc_cnn_cifar100.png)|![](./images/prc_resnet_cifar100.png)|  
 
+The results show that ResNet outperforms the Custom CNN in detencting OOD samples. This could depend on the better accuracy it has on CIFAR-10.
 | Model | AUROC | AUPRC | FPR@95% TPR |
 |--------------------|:-----------------------:|:-----------------------:|:-----------------------:|
 | | FakeData / CIFAR-100 | FakeData / CIFAR-100 | FakeData / CIFAR-100 |
@@ -106,7 +107,7 @@ With images from CIFAR-100 the results are not as good as with FakeData, but sti
 Finally, we implement the Targeted FGSM attack, where the adversarial samples are generated to be classified as a specific target class. The results are not too much different from the standard FGSM attack, but the number of iterations needed to reach the target class is higher. They are shown below some examples of targeted attacks.  
 ![](./images/fgsmt1.png)
 ![](./images/fgsmt2.png)
-![](./images/fgsmt3.png)
+![](./images/fgsmt3.png)  
 As in the previous case, we evaluate the performance of the attacks based on the epsilon value and the max number of iterations. The results are shown below.
 
 | Varying $\varepsilon$ (max iter = 1) | Varying Max Iter ($\varepsilon$ = 0.001) |
