@@ -3,14 +3,14 @@ In this laboratory we firstly explore the concept of Out-of-Distribution (OOD) d
 
 ## Introduction
 `Lab4.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
-`./images` is the directory where they are saved all the resulting plot displayed in this report.
+`./images` is the directory where they are saved all the resulting plot displayed in this report.  
 This report contains the informations about how the exercises are solved and it shows the most significant results.
 
 ### Models
 We use the following two model architectures for the OOD detection task and FGSM attacks:
 
 | Model | Test Accuracy (CIFAR-10)|
-|--------------------|---------------|
+|:--------------------:|:---------------:|
 |Simple Custom CNN   | 0.7147 |
 |Pretrained ResNet   | 0.9260 |
 
@@ -36,12 +36,17 @@ The OOD dataset is built using a Subset of CIFAR-100 with classes not present in
 |![](./images/roc_cnn_cifar100.png)|![](./images/roc_resnet_cifar100.png)|
 |![](./images/prc_cnn_cifar100.png)|![](./images/prc_resnet_cifar100.png)|  
 
-The results show that ResNet outperforms the Custom CNN in detencting OOD samples. This could depend on the better accuracy it has on CIFAR-10.
+The results show that ResNet outperforms the Custom CNN in detencting OOD samples. This could depend on the better accuracy it has on CIFAR-10.  
+
+<div align="center">
+
 | Model | AUROC | AUPRC | FPR@95% TPR |
 |--------------------|:-----------------------:|:-----------------------:|:-----------------------:|
 | | FakeData / CIFAR-100 | FakeData / CIFAR-100 | FakeData / CIFAR-100 |
 |Simple Custom CNN   | 0.6198 / 0.6912 | 0.9513 / 0.8884 | 0.992 / 0.885 |
-|Pretrained ResNet   | 0.9498 / 0.7904 | 0.9950 / 0.9272 | 0.417 / 0.813
+|Pretrained ResNet   | 0.9498 / 0.7904 | 0.9950 / 0.9272 | 0.417 / 0.813 |
+
+</div>
 
 ## Exercise 2 - Adversarial Attacks and Defences
 In this section we implement the Fast Gradient Sign Method (FGSM) as a technique for adversarial attack.
@@ -79,10 +84,14 @@ We evaluate the performance of the ODIN method with the same metrics used for th
 
 ### FakeData
 
+<div align="center">
+
 | Method | AUROC | AUPRC | FPR@95% TPR |
-|--------|:--------:|:--------:|:--------:|
+|:--------:|:--------:|:--------:|:--------:|
 | MSP    | 0.9498 | 0.9950 | 0.417 |
 | ODIN   | **0.9996** | **0.9999** | **0.0** |
+
+</div>
 
 From the results we can notice that ODIN is able to detect almost all the OOD samples, with a very low FPR in the case of FakeData.
 
@@ -92,10 +101,13 @@ From the results we can notice that ODIN is able to detect almost all the OOD sa
 
 ### CIFAR-100
 
+<div align="center">
+
 | Method | AUROC | AUPRC | FPR@95% TPR |
-|--------|:--------:|:--------:|:--------:|
+|:-------:|:--------:|:--------:|:--------:|
 | MSP    | 0.7904 | 0.9272 | 0.813 |
 | ODIN   | **0.8807** | **0.9567** | **0.506** |
+</div>
 
 With images from CIFAR-100 the results are not as good as with FakeData, but still ODIN outperforms the Softmax Probability method in all the metrics considered.
 
