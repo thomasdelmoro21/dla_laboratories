@@ -1,6 +1,17 @@
 # Lab. 1 - CNNs
 This lab is about Convolutional Neural Networks (CNNs). In the following exercises we will explore the basic building blocks of CNNs and use them to solve simple classification tasks. Furthermore we will analyze the behaviour and the performances of various different architectures and techniques. Finally, we will implement Grad-CAM on our CNN to give a visual explanation of the decisions made by the network.
 
+## Installation
+To run the code in this repository, you need to install the following dependencies:
+- `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`  
+- `pip install matplotlib`  
+- `pip install scikit-learn`  
+- `pip install tqdm`  
+- `pip install jupyterlab`  
+- `pip install ipython`  
+- `pip install wandb`  
+- `pip install opencv` 
+
 ## Introduction
 - `Lab1.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
 - `./images` is the directory where they are saved all the resulting plot displayed in this report.  
@@ -42,8 +53,8 @@ From the training curves we can deduce that deeper networks have performed bette
 </div>
 
 ## Exercise 2.2 - Fully Convolutional Network
-In this section we adapt our CNN to be Fully-Convolutional, in order to create a network that predicts classification outputs at all pixels in an input images. With this aim we substitute the final Linear layers with De-Convolutional layers.  
-The experiment was applied on MNIST dataset to predict handwritten digits. We create a specific custom MNIST dataset with different image dimensions (64x64) and with random digit position.  
+In this section we adapt our simple CNN to be Fully-Convolutional, in order to create a network that predicts classification outputs at all pixels in an input image.  
+We start by training the CNN on standard MNIST dataset. Then we build the FCN architecture by substituting the classification head with Convolutional and De-Convolutional layers. Finally we train the FCN on a custom MNIST dataset with image dimensions of 64x64 and random digit position.
 
  Validation Loss    |  Validation Accuracy
 |:-----------------------------:|:----------------------------:|

@@ -1,6 +1,18 @@
 # Lab. 2 - LLMs
 This laboratory is focused on the use of Language Models (LMs) and Large Language Models (LLMs) and their applications. It covers varius NLP tasks shuch as text generation, text classification and question answering. We use the `HuggingFace` library to load datasets and pre-trained models for our tasks. 
 
+## Installation
+To run the code in this repository, you need to install the following dependencies:
+- `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`  
+- `matplotlib`  
+- `scikit-learn`  
+- `tqdm`  
+- `jupyterlab`  
+- `ipython`  
+- `wandb`
+- `huggingface`
+- `transformers`
+
 ## Introduction
 - `Lab1.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
 - `./results` is the directory where they are saved all the resulting outputs displayed in this report.  
