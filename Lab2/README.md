@@ -56,7 +56,7 @@ The default inference mode for GPT2 is *greedy* which not results in satisfying 
 - `temperature` is a hyperparameter that controls the randomness of the next token. The higher the temperature, the more random the next token.
 
 We generate text with several values of these paratemers and we show the results below.  
-As we can observe, the text generated with `do_sample = False` is very repetitive due to the greedy approach. On the contrary, with `do_sample = False` and a high level of temperature the randomness of the text is very high so we can obtain very different results.
+As we can observe, the text generated with `do_sample = False` is very repetitive due to the greedy approach. On the contrary, with `do_sample = True` and a high level of temperature the randomness of the text is very high so we can obtain very different results.
 Ideally, the best results are should be obtained with sampling enabled and a reasonable temperature value.
 
 ```
