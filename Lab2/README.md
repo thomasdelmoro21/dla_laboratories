@@ -2,9 +2,10 @@
 This laboratory is focused on the use of Language Models (LMs) and Large Language Models (LLMs) and their applications. It covers varius NLP tasks shuch as text generation, text classification and question answering. We use the `HuggingFace` library to load datasets and pre-trained models for our tasks. 
 
 ## Introduction
-`Lab1.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
-`./results` is the directory where they are saved all the resulting outputs displayed in this report.  
-In this lab the trained models are not updated in the repository beacause of their bigger size.
+- `Lab1.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
+- `./results` is the directory where they are saved all the resulting outputs displayed in this report.  
+- In this lab the trained models are not updated in the repository beacause of their bigger size.
+- This report contains the informations about how the exercises are solved and it shows the most significant results.
 
 ## Exercise 1 - Small GPT model
 In this first exercise we implement a small autoregressive GPT model for character generation to generate text in the style of Dante Alighieri.  
@@ -54,7 +55,9 @@ The default inference mode for GPT2 is *greedy* which not results in satisfying 
 - `do_sample = True` allows the model to sample the next token from the distribution of the next token.
 - `temperature` is a hyperparameter that controls the randomness of the next token. The higher the temperature, the more random the next token.
 
-We generate text with several values of these paratemers and we show the results below.
+We generate text with several values of these paratemers and we show the results below.  
+As we can observe, the text generated with `do_sample = False` is very repetitive due to the greedy approach. On the contrary, with `do_sample = False` and a high level of temperature the randomness of the text is very high so we can obtain very different results.
+Ideally, the best results are should be obtained with sampling enabled and a reasonable temperature value.
 
 ```
 **do_sample = False**

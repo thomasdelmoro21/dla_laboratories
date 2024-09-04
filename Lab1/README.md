@@ -2,10 +2,10 @@
 This lab is about Convolutional Neural Networks (CNNs). In the following exercises we will explore the basic building blocks of CNNs and use them to solve simple classification tasks. Furthermore we will analyze the behaviour and the performances of various different architectures and techniques. Finally, we will implement Grad-CAM on our CNN to give a visual explanation of the decisions made by the network.
 
 ## Introduction
-`Lab1.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
-`./images` is the directory where they are saved all the resulting plot displayed in this report.  
-`./trained_models` contains some of the models trained in the exercises. Note that heavier models are not included in the repository.  
-This report contains the informations about how the exercises are solved and it shows the most significant results.
+- `Lab1.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
+- `./images` is the directory where they are saved all the resulting plot displayed in this report.  
+- `./trained_models` contains some of the models trained in the exercises. Note that heavier models are not included in the repository.  
+- This report contains the informations about how the exercises are solved and it shows the most significant results.
 
 ## Exercise 1 - MLP and Convolutional Neural Networks
 Firstly, we implement a simple MLP to classify a very easy dataset like MNIST. 

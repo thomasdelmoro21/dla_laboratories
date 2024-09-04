@@ -2,9 +2,9 @@
 In this laboratory we firstly explore the concept of Out-of-Distribution (OOD) detection and then we implement some techniques of adversarial attacks and defences.
 
 ## Introduction
-`Lab4.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
-`./images` is the directory where they are saved all the resulting plot displayed in this report.  
-This report contains the informations about how the exercises are solved and it shows the most significant results.
+- `Lab4.ipynb` constains the notebook with complete code of the solved exercises (they are not shown all the results).
+- `./images` is the directory where they are saved all the resulting plot displayed in this report.  
+- This report contains the informations about how the exercises are solved and it shows the most significant results.
 
 ### Models
 We use the following two model architectures for the OOD detection task and FGSM attacks:
