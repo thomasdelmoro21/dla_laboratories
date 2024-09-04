@@ -1,0 +1,40 @@
+What is the capital of France?
+0: Paris
+1: London
+2: Berlin
+3: Madrid
+Model answer: Paris
+
+
+What is the capital of Italy?
+0: Paris
+1: London
+2: Rome
+3: Madrid
+Model answer: Rome
+
+
+Who was the president of the United States?
+0: Kobe Briant
+1: Barack Obama
+2: Robin Hood
+3: Michael Jackson
+Model answer: Barack Obama
+
+
+What is the man's best friend?
+0: Dog
+1: Cat
+2: Fish
+3: Bird
+Model answer: Cat
+
+
+Who is Matt Demon?
+0: Tennis player
+1: Singer
+2: Lawyer
+3: Actor
+Model answer: Actor
+
+

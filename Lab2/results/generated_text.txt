@@ -1,0 +1,21 @@
+do_sample = False
+I am not a fan of the idea of a "big-budget" movie. I think it's a waste of money. I think it's a waste of time. I think it's a waste of money. I think it's a waste of time. I think it's a waste of time. I think it's a waste of time. I think it's a waste of time. I think it's a waste of time. I think it's a waste of time. I think it's
+
+
+do_sample = True
+temperature = 0.1
+I am not sure if this is a good idea or not, but I am sure that it will be a good idea.  
+I am not sure if this is a good idea or not, but I am sure that it will be a good idea. I am not sure if this is a good idea or not, but I am sure that it will be a good idea. I am not sure if this is a good idea or not, but I am sure that it will be a good idea.
+
+temperature = 0.5
+I am very proud of the work I have done and am looking forward to the next chapter in my life."  
+The former White House aide, who is now a senior adviser to the president, is one of several former aides who have been named to the post.  
+Among them: former national security adviser Michael Flynn, former CIA director Mike Pompeo and former White House chief of staff Reince Priebus.  
+The Post reported that Flynn and Priebus were named to the post in May, after a
+
+temperature = 0.9
+I am not sure of the timing," says Dr. Alvaro. "We will monitor the results of the study again at another clinic, but I am not confident it will be done right because of the risks that the study will bring us."  
+For more information on the upcoming research, please contact:  
+Dr. Alvaro S. de Araujo, MD  
+M.D.  
+Dr. Sato della A. de Araujo, M.D  
